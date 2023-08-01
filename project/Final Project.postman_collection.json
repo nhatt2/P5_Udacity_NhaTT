@@ -1,0 +1,206 @@
+{
+    "info": {
+        "_postman_id": "b08d491f-5633-432a-ab52-a817462e6d80",
+        "name": "P5 Udacity nhattcd99",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [{
+            "name": "Get job",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [{
+                        "key": "token",
+                        "value": "{{authToken}}",
+                        "type": "string"
+                    }]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/job-groups",
+                    "protocol": "https",
+                    "host": [
+                        "{{apiId}}",
+                        "execute-api",
+                        "us-east-1",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "dev",
+                        "job-groups"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete job",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [{
+                        "key": "token",
+                        "value": "{{authToken}}",
+                        "type": "string"
+                    }]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/job-groups/a21a4859-cd6a-4882-ab4c-a9512ec5994b",
+                    "protocol": "https",
+                    "host": [
+                        "{{apiId}}",
+                        "execute-api",
+                        "us-east-1",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "dev",
+                        "job-groups",
+                        "a21a4859-cd6a-4882-ab4c-a9512ec5994b"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get attachment URL",
+            "request": {
+                "auth": {
+                    "type": "noauth"
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://nhattcd99-c5-job-images-dev.s3.amazonaws.com/a21a4859-cd6a-4882-ab4c-a9512ec5994b",
+                    "protocol": "https",
+                    "host": [
+                        "nhattcd99-c5-job-images-dev",
+                        "s3",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "a21a4859-cd6a-4882-ab4c-a9512ec5994b"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create job",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [{
+                        "key": "token",
+                        "value": "{{authToken}}",
+                        "type": "string"
+                    }]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"name\": \"Job group\",\r\n    \"description\": \"Job group description\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/job-groups",
+                    "protocol": "https",
+                    "host": [
+                        "{{apiId}}",
+                        "execute-api",
+                        "us-east-1",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "dev",
+                        "job-groups"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update job",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": [{
+                        "key": "token",
+                        "value": "{{authToken}}",
+                        "type": "string"
+                    }]
+                },
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"name\": \"Updated\",\r\n    \"description\": \"2023-03-28\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/job-groups/a21a4859-cd6a-4882-ab4c-a9512ec5994b",
+                    "protocol": "https",
+                    "host": [
+                        "{{apiId}}",
+                        "execute-api",
+                        "us-east-1",
+                        "amazonaws",
+                        "com"
+                    ],
+                    "path": [
+                        "dev",
+                        "job-groups",
+                        "a21a4859-cd6a-4882-ab4c-a9512ec5994b"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "event": [{
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [{
+            "key": "apiId",
+            "value": "rhp7z7bb26",
+            "type": "default"
+        },
+        {
+            "key": "authToken",
+            "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InpZYmlyRXhjd1lHX0V3c3k3Rm1oZSJ9.eyJpc3MiOiJodHRwczovL2Rldi10eXA1dW5kaTJtM3E2dXFzLnVzLmF1dGgwLmNvbS8iLCJhdWQiOiJiaDQxNlY3R0JhNUZjekhkZHZIVTlPeWZYa0c2d0l1TiIsImlhdCI6MTY5MDM3NjgxOSwiZXhwIjoxNjkwNDEyODE5LCJzdWIiOiJhdXRoMHw2NGI5MjljYmI2YzgwOGM2ZjljY2EzODgiLCJhdF9oYXNoIjoiUnZfMUNFNmRaYTd1UXNaeWNQdkRGQSIsInNpZCI6IkVLc2NrcXFPbWkwY0JGU1JFa2Y5VGZuREtvakJGMEs3Iiwibm9uY2UiOiI3eXdhNjdGOEZ4emNEWFRwOGN1cEhsQnR4aGdoMUgzRiJ9.JdLCU6Z4a-lHE2O6MVVdkSq9uIJmMF4gp7hBGliOZ87bzWAcUKRO-s8Ysf7O7HE4Bfj2y4mbgdIG8HpDih7A5PCfhQMsrtiURwDCECSJYyJL9FkrOrWDWio5f6iJm0CTwX2AaNDagjC8vtY3XrNpf_Vbagn6EGxoJa3XloOPGg1jGZ28XTkzntR1p6m3UnmBz2A3P0zuFdTN3xYrFh_MbVcPc5UaxOhjOnd-0FrX0edfon0OgqIBVVHs3hDkYsz3VxDIlIzyhOKSjzSpUj_i15qQ0uHbWDZKsPn5LSwxwPalXhVXWTSF4Mfn2OBAWqe35hvk57HynDWpxzhxZ8Whrw",
+            "type": "default"
+        }
+    ]
+}
